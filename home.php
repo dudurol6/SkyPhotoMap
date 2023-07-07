@@ -12,16 +12,16 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </head>
 <body>
     
 <div id="app">
     <header>
-        <div class="h-pageTitle f40 f-bold elem-center">SkyPhotoMap</div>
+        <div class="h-pageTitle f-bold elem-center f-lrg">SkyPhotoMap</div>
         <div class="divider"></div>
         <nav>
-            <ul class="f-28 h-nav">
+            <ul class="h-nav f-sml">
                 <li><a href="#">upload</a></li>
                 <li><a href="#">explore</a></li>
                 <li><a href="#">contact</a></li>
@@ -30,8 +30,29 @@
         <div class="divider"></div>
     </header>
     <main>
+
+
         <div id="map"></div>
-        <img id="img" src="img.jpg" width="1000px;">
+        <img id="img" src="album/img3.jpg" width="1000px;">
+
+        <?php
+            function debug_to_console($data) {
+                $output = $data;
+                if (is_array($output))
+                    $output = implode(',', $output);
+            
+                echo "<script>console.log('Debug Objects: " . $output . "');</script>";
+                echo "<script>console.log('$data[2]');</script>";
+            }
+
+
+            $dir    = 'G:/Programming/XAMPP/htdocs/skyphotomap/skyphotomap/album';
+            $files1 = scandir($dir);
+
+            debug_to_console($files1);
+        ?>
+
+
     </main>
     <footer>
 

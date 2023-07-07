@@ -1,14 +1,11 @@
 /*
     default font - 32px
 */
-.f-28{ font-size: 28px; }
-.f-30{ font-size: 30px; }
-.f-32{ font-size: 32px; }
-.f-34{ font-size: 34px; }
-.f-36{ font-size: 36px; }
-.f-38{ font-size: 38px; }
-.f-40{ font-size: 40px; }
+.f-sml{ font-size: 28px; }
+.f-med{ font-size: 34px; }
+.f-lrg{ font-size: 40px; }
 .f-bold{ font-weight: 700; }
+
 .elem-center{ justify-content: center; align-items: center; }
 
 body{
@@ -29,7 +26,6 @@ header, main, footer, nav{
     margin-right: auto;
 }
 header{
-    font-size: 38px;
     font-weight: 700;
     justify-content: center;
 }
